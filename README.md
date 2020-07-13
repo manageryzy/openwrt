@@ -1,3 +1,6 @@
+自用。不定期更新Lienol
+------
+
 编译命令如下:
 -
 1. 首先装好 Ubuntu 64bit，推荐  Ubuntu  18 LTS x64
@@ -24,9 +27,9 @@ sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git
 6. 编译完成后输出路径：op-19/bin/targets
 
 你可以自由使用，但源码编译二次发布请注明我的 GitHub 仓库链接。谢谢合作！
- 
+
  -----------------------------------------------------
- 
+
 My app source code: https://github.com/Lienol/openwrt-package
 
 This is the buildsystem for the OpenWrt Linux distribution.

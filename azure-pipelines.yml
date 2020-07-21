@@ -1,0 +1,36 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+  batch: true
+  branches:
+    include:
+    - "*"
+  paths:
+    exclude:
+    - README.md
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: |
+    apt-get update
+    apt-get install -y sudo time git-core subversion build-essential g++ bash make curl asciidoc binutils bzip2 gettext subversion g++ zlib1g-dev build-essential git python python3 python3-distutils libncurses5-dev gawk gettext unzip file libssl-dev wget libelf-dev ecj fastjar java-propose-classpath   build-essential libncurses5-dev gawk git libssl-dev gettext zlib1g-dev swig unzip time rsync python3 python3-setuptools libssl-dev patch libncurses5 libncurses5-dev zlib1g-dev gawk flex gettext wget unzip xz-utils python python-distutils-extra python3 python3-distutils-extra rsync
+    git config --global user.name "user" && git config --global user.email "user@example.com"
+  displayName: 'setup env'
+
+- script: |
+    ./scripts/feeds update -a
+    ./scripts/feeds install -a
+    cp diffconfig .config 
+    make defconfig
+    make download -j4
+  displayName: 'feed'
+
+
+- script: |
+    IGNORE_ERRORS=1 make world -j
+  displayName: 'build'

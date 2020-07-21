@@ -17,8 +17,8 @@ pool:
 
 steps:
 - script: |
-    apt-get update
-    apt-get install -y sudo time git-core subversion build-essential g++ bash make curl asciidoc binutils bzip2 gettext subversion g++ zlib1g-dev build-essential git python python3 python3-distutils libncurses5-dev gawk gettext unzip file libssl-dev wget libelf-dev ecj fastjar java-propose-classpath   build-essential libncurses5-dev gawk git libssl-dev gettext zlib1g-dev swig unzip time rsync python3 python3-setuptools libssl-dev patch libncurses5 libncurses5-dev zlib1g-dev gawk flex gettext wget unzip xz-utils python python-distutils-extra python3 python3-distutils-extra rsync
+    sudo apt-get update
+    sudo apt-get install -y sudo time git-core subversion build-essential g++ bash make curl asciidoc binutils bzip2 gettext subversion g++ zlib1g-dev build-essential git python python3 python3-distutils libncurses5-dev gawk gettext unzip file libssl-dev wget libelf-dev ecj fastjar java-propose-classpath   build-essential libncurses5-dev gawk git libssl-dev gettext zlib1g-dev swig unzip time rsync python3 python3-setuptools libssl-dev patch libncurses5 libncurses5-dev zlib1g-dev gawk flex gettext wget unzip xz-utils python python-distutils-extra python3 python3-distutils-extra rsync
     git config --global user.name "user" && git config --global user.email "user@example.com"
   displayName: 'setup env'
 

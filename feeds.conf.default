@@ -5,4 +5,4 @@ src-git luci https://github.com/Lienol/openwrt-luci.git;dev-19.07
 src-git lienol https://github.com/Lienol/openwrt-package
 src-git mana https://github.com/manageryzy/openwrt-packages
 src-git small https://github.com/manageryzy/small
-
+src-git luciwrtbwmon https://github.com/brvphoenix/luci-app-wrtbwmon
